@@ -5,25 +5,14 @@
     <edmx:DataServices>
         <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="com.sap.catalog.productcatalogui.annotations.CatalogService">
             <Annotations Target="CatalogService.Products">
-                <!-- This controls the columns on the main table -->
                 <Annotation Term="UI.LineItem">
                     <Collection>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="name" />
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="category" />
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="features" />
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="generatedDescription" />
-                        </Record>
+                        <Record Type="UI.DataField"><PropertyValue Property="Value" Path="name" /></Record>
+                        <Record Type="UI.DataField"><PropertyValue Property="Value" Path="category" /></Record>
+                        <Record Type="UI.DataField"><PropertyValue Property="Value" Path="features" /></Record>
+                        <Record Type="UI.DataField"><PropertyValue Property="Value" Path="generatedDescription" /></Record>
                     </Collection>
                 </Annotation>
-
-                <!-- These annotations control the fields on the detail page -->
                 <Annotation Term="UI.Facets">
                     <Collection>
                         <Record Type="UI.ReferenceFacet">
@@ -36,18 +25,10 @@
                     <Record>
                         <PropertyValue Property="Data">
                             <Collection>
-                                <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="name" />
-                                </Record>
-                                <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="category" />
-                                </Record>
-                                <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="features" />
-                                </Record>
-                                <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="generatedDescription" />
-                                </Record>
+                                <Record Type="UI.DataField"><PropertyValue Property="Value" Path="name" /></Record>
+                                <Record Type="UI.DataField"><PropertyValue Property="Value" Path="category" /></Record>
+                                <Record Type="UI.DataField"><PropertyValue Property="Value" Path="features" /></Record>
+                                <Record Type="UI.DataField"><PropertyValue Property="Value" Path="generatedDescription" /></Record>
                             </Collection>
                         </PropertyValue>
                     </Record>
