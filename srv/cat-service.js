@@ -13,10 +13,19 @@ module.exports = cds.service.impl(function () {
 
     // Handler for Text Generation
     this.before('CREATE', Products, async (req) => {
-        const { name, baseDescription } = req.data;
-        if (name && baseDescription) {
+        // Use the new fields: name, category, features
+        const { name, category, features } = req.data;
+
+        if (name && category && features) {
             console.log(`>>>> Calling Groq API for text generation...`);
-            const prompt = `Based on the product name "${name}" and its basic description "${baseDescription}", write a compelling and professional marketing description of about 40-60 words.`;
+
+            // Create a more structured prompt for better results
+            const prompt = `You are a professional marketing copywriter. Generate a short, compelling, and friendly marketing description for a new product. The description should be a single paragraph.
+            Product Details:
+            - Name: ${name}
+            - Category: ${category}
+            - Key Features: ${features}`;
+
             const apiPayload = { model: "llama3-8b-8192", messages: [{ role: "user", content: prompt }] };
             const apiHeaders = { 'Authorization': `Bearer ${GROQ_API_KEY}`, 'Content-Type': 'application/json' };
 
