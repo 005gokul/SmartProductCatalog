@@ -16,20 +16,15 @@
       "toolsId": "bc6edcd0-c140-42a1-8b95-46a1023627f1"
     },
     "dataSources": {
-      "mainService": {
-        "uri": "/odata/v4/catalog/",
-        "type": "OData",
-        "settings": {
-          "annotations": ["annotations"],
-          "odataVersion": "4.0"
-        }
-      },
-      "annotations": {
-    "uri": "annotations/annotations.xml",
-    "type": "ODataAnnotation",
-    "settings": {}
-}
-    },
+  "mainService": {
+    "uri": "/odata/v4/catalog/",
+    "type": "OData",
+    "settings": {
+      "annotations": [],
+      "odataVersion": "4.0"
+    }
+  }
+},
     "crossNavigation": {
       "inbounds": {
         "Product-manage": {
@@ -146,22 +141,7 @@
     "options": {
         "settings": {
             "editableHeaderContent": false,
-            "contextPath": "/Products",
-            "content": {
-                "body": {
-                    "sections": {
-                        "CustomImageUploader": {
-                            "title": "Image Analysis",
-                            "position": {
-                                "anchor": "GeneralInformation",
-                                "placement": "Before"
-                            },
-                            "template": "com.sap.catalog.productcatalogui.ext.fragment.ImageUploader",
-                            "type": "XMLFragment"
-                        }
-                    }
-                }
-            }
+            "contextPath": "/Products"
         }
     }
 }

@@ -14,15 +14,35 @@
                             <PropertyValue Property="Value" Path="baseDescription" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="stock" />
-                        </Record>
-                        <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="generatedDescription" />
                         </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="imageAnalysis" />
+                    </Collection>
+                </Annotation>
+
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="General Information" />
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#GeneralInfo" />
                         </Record>
                     </Collection>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="GeneralInfo">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="name" />
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="baseDescription" />
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="generatedDescription" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
                 </Annotation>
             </Annotations>
         </Schema>
