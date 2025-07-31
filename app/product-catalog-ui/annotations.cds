@@ -1,38 +1,29 @@
 using CatalogService as service from '../../srv/cat-service';
+
 annotate service.Products with @(
     UI.FieldGroup #GeneratedGroup : {
         $Type : 'UI.FieldGroupType',
         Data : [
             {
                 $Type : 'UI.DataField',
-                Label : 'name',
+                Label : 'Name',
                 Value : name,
             },
             {
                 $Type : 'UI.DataField',
-                Label : 'baseDescription',
-                Value : baseDescription,
+                Label : 'Category',
+                Value : category,
             },
             {
                 $Type : 'UI.DataField',
-                Label : 'stock',
-                Value : stock,
+                Label : 'Features',
+                Value : features,
             },
             {
                 $Type : 'UI.DataField',
-                Label : 'generatedDescription',
+                Label : 'Generated Description',
                 Value : generatedDescription,
-            },
-            {
-                $Type : 'UI.DataField',
-                Label : 'imageURL',
-                Value : imageURL,
-            },
-            {
-                $Type : 'UI.DataField',
-                Label : 'imageAnalysis',
-                Value : imageAnalysis,
-            },
+            }
         ],
     },
     UI.Facets : [
@@ -41,34 +32,28 @@ annotate service.Products with @(
             ID : 'GeneratedFacet1',
             Label : 'General Information',
             Target : '@UI.FieldGroup#GeneratedGroup',
-        },
+        }
     ],
     UI.LineItem : [
         {
             $Type : 'UI.DataField',
-            Label : 'name',
+            Label : 'Name',
             Value : name,
         },
         {
             $Type : 'UI.DataField',
-            Label : 'baseDescription',
-            Value : baseDescription,
+            Label : 'Category',
+            Value : category,
         },
         {
             $Type : 'UI.DataField',
-            Label : 'stock',
-            Value : stock,
+            Label : 'Features',
+            Value : features,
         },
         {
             $Type : 'UI.DataField',
-            Label : 'generatedDescription',
+            Label : 'Generated Description',
             Value : generatedDescription,
-        },
-        {
-            $Type : 'UI.DataField',
-            Label : 'imageURL',
-            Value : imageURL,
-        },
-    ],
+        }
+    ]
 );
-
